@@ -38,7 +38,7 @@ function updateCountdown() {
 
   daysEl.textContent = days;
   hoursEl.textContent = hours;
-  minutesEl.textContent = hours < 0 ? 0 : minutes;
+  minutesEl.textContent = minutes;
   secondsEl.textContent = seconds;
 }
 
