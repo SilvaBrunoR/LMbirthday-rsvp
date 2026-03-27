@@ -30,10 +30,10 @@ body {
 /* HERO */
 .hero {
   position: relative;
-  min-height: 500px;
+  min-height: 420px; /* smaller height = less cropping */
   background-image: url("./images/Twin tots celebrating under a sunny sky.png");
   background-size: cover;
-  background-position: center top;
+  background-position: center 20%; /* 👈 key change */
   display: flex;
   align-items: center;
   padding: 24px 0 60px;
