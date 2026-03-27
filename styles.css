@@ -31,7 +31,7 @@ body {
 .hero {
   position: relative;
   min-height: 500px;
-  background-image: url("images/Twin tots celebrating under a sunny sky.png");
+  background-image: url("./images/Twin tots celebrating under a sunny sky.png");
   background-size: cover;
   background-position: center top;
   display: flex;
