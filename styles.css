@@ -3,9 +3,8 @@
   --card: #FFF9F1;
   --accent: #C96F4A;
   --accent-dark: #A75636;
-  --green: #7A9A52a;
+  --green: #7A9A52;
   --brown: #6B4E3D;
-  --light-brown: #E8D7C3;
   --text: #3F3027;
   --muted: #6A5A50;
   --shadow: rgba(107, 78, 61, 0.12);
@@ -29,29 +28,50 @@ body {
 
 /* HERO */
 .hero {
-  min-height: 420px;
-  background-image: url("./images/Twin tots celebrating under a sunny sky.png");
-  background-size: cover;
-  background-position: center 25%;
+  position: relative;
+  min-height: 430px;
+  display: flex;
+  align-items: center;
+  padding: 24px 0 60px;
+  overflow: hidden;
+  background: #7db2e8;
+}
+
+.hero-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 22%;
+  z-index: 0;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.35));
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.22),
+    rgba(0, 0, 0, 0.34)
+  );
+  z-index: 1;
 }
 
 .hero-inner {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   display: flex;
   justify-content: center;
   text-align: center;
 }
 
 .hero-content {
-  max-width: 700px;
+  max-width: 760px;
   color: white;
+  padding: 18px 22px;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.16);
+  backdrop-filter: blur(3px);
 }
 
 .eyebrow {
@@ -60,19 +80,21 @@ body {
   letter-spacing: 2px;
   margin-bottom: 10px;
   opacity: 0.95;
+  font-weight: 700;
 }
 
 .hero h1 {
   margin: 0;
-  font-size: 48px;
-  line-height: 1.1;
+  font-size: 54px;
+  line-height: 1.08;
   text-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
 }
 
 .hero-subtitle {
   margin: 16px auto 24px;
   font-size: 18px;
-  max-width: 620px;
+  max-width: 680px;
+  font-weight: 600;
 }
 
 .hero-button {
@@ -95,28 +117,28 @@ body {
 /* HERO DECORATIONS */
 .hero-deco {
   position: absolute;
-  z-index: 2;
+  z-index: 3;
   pointer-events: none;
   opacity: 0.95;
 }
 
 .hero-deco-left {
-  left: 6%;
-  top: 90px;
+  left: 5%;
+  top: 95px;
   font-size: 40px;
   animation: floaty 4s ease-in-out infinite;
 }
 
 .hero-deco-right {
-  right: 8%;
-  top: 110px;
+  right: 7%;
+  top: 120px;
   font-size: 34px;
   animation: floaty 5s ease-in-out infinite;
 }
 
 .hero-deco-bottom {
-  right: 18%;
-  bottom: 90px;
+  right: 20%;
+  bottom: 95px;
   font-size: 28px;
   animation: floaty 6s ease-in-out infinite;
 }
@@ -127,24 +149,24 @@ body {
   left: 0;
   right: 0;
   bottom: -1px;
-  height: 90px;
+  height: 88px;
   background: var(--bg);
   border-top-left-radius: 50% 100%;
   border-top-right-radius: 50% 100%;
-  z-index: 1;
+  z-index: 2;
 }
 
 /* LAYOUT */
 .container {
-  max-width: 860px;
+  max-width: 960px;
   margin: 0 auto;
   padding: 0 16px;
   position: relative;
 }
 
 main.container {
-  margin-top: -18px;
-  z-index: 3;
+  margin-top: -12px;
+  z-index: 4;
 }
 
 .card {
@@ -348,8 +370,7 @@ button:disabled {
 }
 
 @keyframes floaty {
-  0%,
-  100% {
+  0%, 100% {
     transform: translateY(0px);
   }
   50% {
@@ -360,9 +381,17 @@ button:disabled {
 /* MOBILE */
 @media (max-width: 768px) {
   .hero {
-    min-height: 390px;
+    min-height: 360px;
     padding-bottom: 50px;
-    background-position: center top;
+  }
+
+  .hero-img {
+    object-position: center 16%;
+  }
+
+  .hero-content {
+    padding: 14px 16px;
+    max-width: 95%;
   }
 
   .hero h1 {
@@ -382,17 +411,17 @@ button:disabled {
 
   .hero-deco-left {
     left: 5%;
-    top: 80px;
+    top: 76px;
   }
 
   .hero-deco-right {
     right: 5%;
-    top: 95px;
+    top: 92px;
   }
 
   .hero-deco-bottom {
     right: 12%;
-    bottom: 80px;
+    bottom: 74px;
   }
 
   .details-grid,
