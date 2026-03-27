@@ -3,45 +3,120 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Birthday RSVP</title>
+  <title>Leo & Marina's Dino Birthday RSVP</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <main class="container">
-    <header class="card">
-      <h1>🎉 Leo & Marina’s Birthday Party</h1>
-      <p class="subtitle">Please RSVP so we can plan food, cake, and party bags.</p>
 
-      <div class="details">
-        <div><strong>Date:</strong> Saturday, 14 March 2026</div>
-        <div><strong>Time:</strong> 10:00 AM – 1:00 PM</div>
-        <div><strong>Location:</strong> Your Address / Venue Name</div>
+  <header class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="eyebrow">A prehistoric celebration</p>
+      <h1>🦕 Leo & Marina’s Birthday Party 🦴</h1>
+      <p class="hero-subtitle">
+        Join us for a roar-some day of cake, games, fun and dino adventures.
+      </p>
+      <a href="#rsvp" class="hero-button">RSVP Now</a>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="card intro-card">
+      <h2>Come Celebrate With Us</h2>
+      <p>
+        We’re getting ready for a special birthday celebration and would love to have you with us.
+        Please let us know if you can make it so we can organise food, cake, and party bags for all our little explorers.
+      </p>
+    </section>
+
+    <section class="card event-details">
+      <h2>Party Details</h2>
+      <div class="details-grid">
+        <div class="detail-box">
+          <h3>Date</h3>
+          <p>Saturday, 14 March 2026</p>
+        </div>
+        <div class="detail-box">
+          <h3>Time</h3>
+          <p>10:00 AM – 1:00 PM</p>
+        </div>
+        <div class="detail-box">
+          <h3>Location</h3>
+          <p>Ripley Markets, 6 Amity Wy, South Ripley QLD 4306
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d823.2753087031177!2d152.80742732214512!3d-27.69079450953007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sau!4v1774606798570!5m2!1sen!2sau" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card countdown-card">
+      <h2>Countdown to the Big Day</h2>
+      <div id="countdown" class="countdown">
+        <div class="countdown-item">
+          <span id="days">0</span>
+          <small>Days</small>
+        </div>
+        <div class="countdown-item">
+          <span id="hours">0</span>
+          <small>Hours</small>
+        </div>
+        <div class="countdown-item">
+          <span id="minutes">0</span>
+          <small>Minutes</small>
+        </div>
+        <div class="countdown-item">
+          <span id="seconds">0</span>
+          <small>Seconds</small>
+        </div>
+      </div>
+      <p id="countdownMessage" class="small"></p>
+    </section>
+
+    <section class="card map-card">
+      <h2>Find the Dino Party</h2>
+      <p class="map-text">
+        Use the map below to find us easily.
+      </p>
+
+      <div class="map-wrapper">
+        <iframe
+          src="https://www.google.com/maps?q=Brisbane%20QLD&output=embed"
+          width="100%"
+          height="320"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
       </div>
 
       <p class="small">
-        Tip: Add a Google Maps link here later.
+        Replace this map with your real address when you are ready.
       </p>
-    </header>
+    </section>
 
-    <section class="card">
+    <section class="card" id="rsvp">
       <h2>RSVP</h2>
+      <p class="small">
+        Please reply by <strong>5 March 2026</strong>.
+      </p>
 
-      <!-- IMPORTANT: You'll replace the action URL in Part C -->
-      <form id="rsvpForm" action="https://formspree.io/f/xaqpyzlq" method="POST">
+      <form id="rsvpForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
         <label>
           Your name *
           <input name="name" type="text" required placeholder="e.g., Bruno" />
         </label>
 
         <label>
-          Email (optional)
-          <input name="email" type="email" placeholder="e.g., you@email.com" />
+          Email or phone (optional)
+          <input name="contact" type="text" placeholder="e.g., your email or mobile number" />
         </label>
 
         <label>
-          Are you coming? *
+          Will you be attending? *
           <select name="attendance" required>
-            <option value="" selected disabled>Consider…</option>
+            <option value="" selected disabled>Select an option</option>
             <option>Yes, we’ll be there</option>
             <option>No, we can’t make it</option>
             <option>Maybe</option>
@@ -50,22 +125,26 @@
 
         <div class="grid">
           <label>
-            Adults
+            Number of adults
             <input name="adults" type="number" min="0" value="0" />
           </label>
 
           <label>
-            Kids
+            Number of kids
             <input name="kids" type="number" min="0" value="0" />
           </label>
         </div>
 
         <label>
-          Dietary requirements / notes
-          <textarea name="dietary" rows="4" placeholder="Allergies, preferences, etc."></textarea>
+          Dietary requirements / allergies
+          <textarea name="dietary" rows="4" placeholder="Let us know about allergies or dietary needs"></textarea>
         </label>
 
-        <!-- Anti-spam honeypot field (hidden) -->
+        <label>
+          Message for the birthday kids (optional)
+          <textarea name="message" rows="3" placeholder="Write a little message if you'd like"></textarea>
+        </label>
+
         <input type="text" name="_gotcha" class="honeypot" tabindex="-1" autocomplete="off" />
 
         <button type="submit" id="submitBtn">Send RSVP</button>
@@ -73,9 +152,19 @@
       </form>
     </section>
 
+    <section class="card tips-card">
+      <h2>Good to Know</h2>
+      <ul class="tips-list">
+        <li>Please bring hats, sunscreen and water bottles.</li>
+        <li>Comfortable play clothes are recommended.</li>
+        <li>Let us know if your child has any allergies.</li>
+      </ul>
+    </section>
+
     <footer class="footer">
-      <p class="small">Made with ❤️ for the party. If you have questions, message us on WhatsApp.</p>
+      <p class="small">Made with love for a very special dinosaur day 🦕</p>
     </footer>
+
   </main>
 
   <script src="script.js"></script>
