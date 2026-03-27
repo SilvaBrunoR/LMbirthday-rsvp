@@ -11,14 +11,18 @@
   <header class="hero">
     <img
       src="./images/Twin tots celebrating under a sunny sky.png"
-      alt="Leo and Marina"
+      alt="Leo and Marina in Flintstones-style outfits"
       class="hero-img"
     />
 
     <div class="hero-overlay"></div>
 
+    <div class="hero-deco hero-deco-left">🦕</div>
+    <div class="hero-deco hero-deco-right">🦴</div>
+    <div class="hero-deco hero-deco-bottom">🌿</div>
+
     <div class="container hero-inner">
-      <div class="hero-content">
+      <div class="hero-content fade-in">
         <p class="eyebrow">A prehistoric celebration</p>
         <h1>Leo & Marina’s Birthday Party</h1>
         <p class="hero-subtitle">
@@ -33,13 +37,150 @@
   </header>
 
   <main class="container">
-    <section class="card">
+
+    <section class="card intro-card fade-in">
       <h2>Come Celebrate With Us</h2>
       <p>
         We’re getting ready for a special birthday celebration and would love to have you with us.
+        Please let us know if you can make it so we can organise food, cake, and party bags for all our little explorers.
       </p>
     </section>
+
+    <section class="card event-details fade-in">
+      <h2>Party Details</h2>
+      <div class="details-grid">
+        <div class="detail-box">
+          <h3>Date</h3>
+          <p>Saturday, 11 April 2026</p>
+        </div>
+        <div class="detail-box">
+          <h3>Time</h3>
+          <p>11:00 AM – 2:00 PM</p>
+        </div>
+        <div class="detail-box">
+          <h3>Location</h3>
+          <p>Ripley Markets, 6 Amity Wy, South Ripley QLD 4306</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card countdown-card fade-in">
+      <h2>Countdown to the Big Day</h2>
+      <div id="countdown" class="countdown">
+        <div class="countdown-item">
+          <span id="days">0</span>
+          <small>Days</small>
+        </div>
+        <div class="countdown-item">
+          <span id="hours">0</span>
+          <small>Hours</small>
+        </div>
+        <div class="countdown-item">
+          <span id="minutes">0</span>
+          <small>Minutes</small>
+        </div>
+        <div class="countdown-item">
+          <span id="seconds">0</span>
+          <small>Seconds</small>
+        </div>
+      </div>
+      <p id="countdownMessage" class="small"></p>
+    </section>
+
+    <section class="card map-card fade-in">
+      <h2>Find the Dino Party</h2>
+      <p class="map-text">
+        Use the map below to find us easily.
+      </p>
+
+      <div class="map-wrapper">
+        <iframe
+          src="https://www.google.com/maps?q=Ripley%20Markets%206%20Amity%20Wy%20South%20Ripley%20QLD%204306&output=embed"
+          width="100%"
+          height="320"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+      <p class="small">
+        You can open the venue directly in Google Maps from your browser if needed.
+      </p>
+    </section>
+
+    <section class="card fade-in" id="rsvp">
+      <h2>RSVP</h2>
+      <p class="small">
+        Please reply by <strong>5 March 2026</strong>.
+      </p>
+
+      <form id="rsvpForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <label>
+          Your name *
+          <input name="name" type="text" required placeholder="e.g., Bruno" />
+        </label>
+
+        <label>
+          Email or phone (optional)
+          <input name="contact" type="text" placeholder="e.g., your email or mobile number" />
+        </label>
+
+        <label>
+          Will you be attending? *
+          <select name="attendance" required>
+            <option value="" selected disabled>Select an option</option>
+            <option>Yes, we’ll be there</option>
+            <option>No, we can’t make it</option>
+            <option>Maybe</option>
+          </select>
+        </label>
+
+        <div class="grid">
+          <label>
+            Number of adults
+            <input name="adults" type="number" min="0" value="0" />
+          </label>
+
+          <label>
+            Number of kids
+            <input name="kids" type="number" min="0" value="0" />
+          </label>
+        </div>
+
+        <label>
+          Dietary requirements / allergies
+          <textarea name="dietary" rows="4" placeholder="Let us know about allergies or dietary needs"></textarea>
+        </label>
+
+        <label>
+          Message for the birthday kids (optional)
+          <textarea name="message" rows="3" placeholder="Write a little message if you'd like"></textarea>
+        </label>
+
+        <input type="text" name="_gotcha" class="honeypot" tabindex="-1" autocomplete="off" />
+
+        <button type="submit" id="submitBtn">Send RSVP</button>
+        <p class="small" id="statusMsg" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="card tips-card fade-in">
+      <h2>Good to Know</h2>
+      <ul class="tips-list">
+        <li>Please bring hats, sunscreen and water bottles.</li>
+        <li>Comfortable play clothes are recommended.</li>
+        <li>Let us know if your child has any allergies.</li>
+      </ul>
+    </section>
+
+    <footer class="footer">
+      <p class="small">Made with love for a very special dinosaur day 🦕</p>
+    </footer>
+
   </main>
 
+  <script src="script.js"></script>
 </body>
 </html>
