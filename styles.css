@@ -31,9 +31,9 @@ body {
 .hero {
   position: relative;
   min-height: 500px;
-  background-image: url("images/header.jpg");
+  background-image: url("images/Twin tots celebrating under a sunny sky.png");
   background-size: cover;
-  background-position: center;
+  background-position: center top;
   display: flex;
   align-items: center;
   padding: 24px 0 60px;
@@ -43,7 +43,7 @@ body {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(rgba(63, 48, 39, 0.42), rgba(63, 48, 39, 0.42));
+  background: linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.35));
 }
 
 .hero-inner {
@@ -71,7 +71,7 @@ body {
   margin: 0;
   font-size: 48px;
   line-height: 1.1;
-  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
 }
 
 .hero-subtitle {
@@ -367,6 +367,7 @@ button:disabled {
   .hero {
     min-height: 390px;
     padding-bottom: 50px;
+    background-position: center top;
   }
 
   .hero h1 {
