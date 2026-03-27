@@ -10,19 +10,28 @@
 
   <header class="hero">
     <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <p class="eyebrow">A prehistoric celebration</p>
-      <h1>🦕 Leo & Marina’s Birthday Party 🦴</h1>
-      <p class="hero-subtitle">
-        Join us for a roar-some day of cake, games, fun and dino adventures.
-      </p>
-      <a href="#rsvp" class="hero-button">RSVP Now</a>
+
+    <div class="hero-deco hero-deco-left">🦕</div>
+    <div class="hero-deco hero-deco-right">🦴</div>
+    <div class="hero-deco hero-deco-bottom">🌿</div>
+
+    <div class="container hero-inner">
+      <div class="hero-content fade-in">
+        <p class="eyebrow">A prehistoric celebration</p>
+        <h1>Leo & Marina’s Birthday Party</h1>
+        <p class="hero-subtitle">
+          Join us for a roar-some day of cake, games, fun and dino adventures.
+        </p>
+        <a href="#rsvp" class="hero-button">RSVP Now</a>
+      </div>
     </div>
+
+    <div class="hero-wave"></div>
   </header>
 
   <main class="container">
 
-    <section class="card intro-card">
+    <section class="card intro-card fade-in">
       <h2>Come Celebrate With Us</h2>
       <p>
         We’re getting ready for a special birthday celebration and would love to have you with us.
@@ -30,7 +39,7 @@
       </p>
     </section>
 
-    <section class="card event-details">
+    <section class="card event-details fade-in">
       <h2>Party Details</h2>
       <div class="details-grid">
         <div class="detail-box">
@@ -43,15 +52,58 @@
         </div>
         <div class="detail-box">
           <h3>Location</h3>
-          <p>Ripley Markets, 6 Amity Wy, South Ripley QLD 4306
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d823.2753087031177!2d152.80742732214512!3d-27.69079450953007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sau!4v1774607545319!5m2!1sen!2sau" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </p>
+          <p>Ripley Markets, 6 Amity Wy, South Ripley QLD 4306</p>
         </div>
       </div>
     </section>
 
+    <section class="card countdown-card fade-in">
+      <h2>Countdown to the Big Day</h2>
+      <div id="countdown" class="countdown">
+        <div class="countdown-item">
+          <span id="days">0</span>
+          <small>Days</small>
+        </div>
+        <div class="countdown-item">
+          <span id="hours">0</span>
+          <small>Hours</small>
+        </div>
+        <div class="countdown-item">
+          <span id="minutes">0</span>
+          <small>Minutes</small>
+        </div>
+        <div class="countdown-item">
+          <span id="seconds">0</span>
+          <small>Seconds</small>
+        </div>
+      </div>
+      <p id="countdownMessage" class="small"></p>
+    </section>
 
-    <section class="card" id="rsvp">
+    <section class="card map-card fade-in">
+      <h2>Find the Dino Party</h2>
+      <p class="map-text">
+        Use the map below to find us easily.
+      </p>
+
+      <div class="map-wrapper">
+        <iframe
+          src="https://www.google.com/maps?q=Ripley%20Markets%206%20Amity%20Wy%20South%20Ripley%20QLD%204306&output=embed"
+          width="100%"
+          height="320"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+      <p class="small">
+        You can open the venue directly in Google Maps from your browser if needed.
+      </p>
+    </section>
+
+    <section class="card fade-in" id="rsvp">
       <h2>RSVP</h2>
       <p class="small">
         Please reply by <strong>5 March 2026</strong>.
@@ -107,7 +159,7 @@
       </form>
     </section>
 
-    <section class="card tips-card">
+    <section class="card tips-card fade-in">
       <h2>Good to Know</h2>
       <ul class="tips-list">
         <li>Please bring hats, sunscreen and water bottles.</li>
