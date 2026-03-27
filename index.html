@@ -20,7 +20,7 @@
         <p class="eyebrow">A prehistoric celebration</p>
         <h1>Leo & Marina’s Birthday Party</h1>
         <p class="hero-subtitle">
-          Join us for a Yabba Dabba Doo day. Our little rock Starts are smashing their first birthday. <pre-historic></pre-historic> adventures.
+          Join us for a roar-some day of cake, games, fun and dino adventures.
         </p>
         <a href="#rsvp" class="hero-button">RSVP Now</a>
       </div>
@@ -44,17 +44,40 @@
       <div class="details-grid">
         <div class="detail-box">
           <h3>Date</h3>
-          <p>Saturday, 11 April 2026</p>
+          <p>Saturday, 14 March 2026</p>
         </div>
         <div class="detail-box">
           <h3>Time</h3>
-          <p>11:00 AM – 2:00 PM</p>
+          <p>10:00 AM – 1:00 PM</p>
         </div>
         <div class="detail-box">
           <h3>Location</h3>
           <p>Ripley Markets, 6 Amity Wy, South Ripley QLD 4306</p>
         </div>
       </div>
+    </section>
+
+    <section class="card countdown-card fade-in">
+      <h2>Countdown to the Big Day</h2>
+      <div id="countdown" class="countdown">
+        <div class="countdown-item">
+          <span id="days">0</span>
+          <small>Days</small>
+        </div>
+        <div class="countdown-item">
+          <span id="hours">0</span>
+          <small>Hours</small>
+        </div>
+        <div class="countdown-item">
+          <span id="minutes">0</span>
+          <small>Minutes</small>
+        </div>
+        <div class="countdown-item">
+          <span id="seconds">0</span>
+          <small>Seconds</small>
+        </div>
+      </div>
+      <p id="countdownMessage" class="small"></p>
     </section>
 
     <section class="card map-card fade-in">
@@ -83,13 +106,18 @@
     <section class="card fade-in" id="rsvp">
       <h2>RSVP</h2>
       <p class="small">
-        Please reply by <strong>29th of April 2026, so we can cater for everyone attending!!</strong>.
+        Please reply by <strong>5 March 2026</strong>.
       </p>
 
       <form id="rsvpForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
         <label>
           Your name *
           <input name="name" type="text" required placeholder="e.g., Bruno" />
+        </label>
+
+        <label>
+          Email or phone (optional)
+          <input name="contact" type="text" placeholder="e.g., your email or mobile number" />
         </label>
 
         <label>
